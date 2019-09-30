@@ -100,6 +100,7 @@
     $city = $_POST["city"];
     $data = mysqli_query($conn,"SELECT * FROM table1");
 
+    echo "<div class='container'>";
     echo "<table class='table table-striped table-dark'>";
     echo "<thead>
     <tr>
@@ -119,6 +120,7 @@
     }
     echo "</tbody>";
     echo "</table>";
+    echo "</div>";
   }
 
   if(isset($_POST["search"])){
@@ -126,6 +128,7 @@
     $city = $_POST["city"];
     $data = mysqli_query($conn,"SELECT * FROM table1 where name = '$name'");
 
+    echo "<div class='container'>";
     echo "<table class='table table-striped table-dark'>";
     echo "<thead>
     <tr>
@@ -145,5 +148,6 @@
     }
     echo "</tbody>";
     echo "</table>";
+    echo "</div>";
   }
 ?>
